@@ -1,0 +1,30 @@
+{% extends 'weather/base.html' %}
+{% block content %}
+    <section class="weather-section">
+        <h1>Current Weather</h1>
+        <form method="POST" id="weather-form" class="weather-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" name="city" id="city-input" placeholder="Enter city name" required>
+                <button type="submit" id="submit-btn">Get Weather</button>
+            </div>
+        </form>
+
+        {% if error %}
+            <div class="error-message">{{ error }}</div>
+        {% endif %}
+
+        {% if weather_data %}
+            <div class="weather-card">
+                <h2>{{ weather_data.name }}</h2>
+                <img src="{{ weather_data.icon_url }}" alt="Weather Icon" class="weather-icon">
+                <p class="temperature">{{ weather_data.main.temp }}°C</p>
+                <p class="condition">{{ weather_data.weather.0.description | title }}</p>
+                <div class="weather-details">
+                    <p>Humidity: {{ weather_data.main.humidity }}%</p>
+                    <p>Wind Speed: {{ weather_data.wind.speed }} m/s</p>
+                </div>
+            </div>
+        {% endif %}
+    </section>
+{% endblock %}

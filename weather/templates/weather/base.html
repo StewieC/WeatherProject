@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="/static/weather/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="{% url 'weather:home' %}" class="logo">Weather Dashboard</a>
+                <ul class="nav-links">
+                    <li><a href="{% url 'weather:home' %}">Current Weather</a></li>
+                    <li><a href="{% url 'weather:forecast' %}">5-Day Forecast</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <script src="/static/weather/js/scripts.js"></script>
+</body>
+</html>
