@@ -1,0 +1,84 @@
+# Python/Django specific
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Django specific
+*.log
+local_settings.py
+*.sqlite3
+media/
+*.db
+*.backup
+
+# Static and media files (if collected locally)
+staticfiles/
+collected_static/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+*.swp
+*~
+
+# Dependency directories
+node_modules/
+pip-wheel-metadata/
+
+# Testing and coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.pytest_cache/
+.tox/
+
+# Miscellaneous
+*.bak
+*.gho
+*.orig
+*.tmp
+*.temp
+Thumbs.db
+desktop.ini
+
+# Build and distribution
+build/
+dist/
+*.egg
+*.egg-info/
+.eggs/
+*.whl
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
